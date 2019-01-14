@@ -1,0 +1,294 @@
+.cameraContents h2.custom, .cameraContents h4.custom{
+    max-width: 60rem;
+}
+.main-frame.analysts{
+    margin-bottom: 20%;
+    z-index: 7;
+
+    transition: 1s;
+    margin-top: -55%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main-frame.analysts.fallback{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+.bottom-buttons{
+    position: relative;
+    z-index: 10;
+    margin-top: 4%;
+}
+
+
+@-webkit-keyframes animate-it {
+    0%, 60%, 80%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    20% {
+        -webkit-transform: translateX(-5px);
+    }
+    40% {
+        -webkit-transform: translateX(20px);
+    }
+}
+@keyframes animate-it {
+    0%, 60%, 80%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    20% {
+        -webkit-transform: translateX(-5px);
+    }
+    40% {
+        -webkit-transform: translateX(20px);
+    }
+}
+
+
+@media screen and (max-width: 1230px){
+    .bottom-buttons{
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .bottom-buttons{
+        margin-top: 100px;
+    }
+
+    #menuF{
+        display: none!important;
+    }
+}
+
+@media screen and (min-width: 991px){
+    .main-frame.analysts{
+        margin-bottom: 10%
+    }
+
+
+}
+
+@media screen and (max-width: 800px){
+    .main-frame.analysts.fallback{
+        visibility: visible;
+        opacity: 1;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+}
+
+
+
+
+.camera_caption h2.custom{
+	font-size: 60px;
+}
+
+.camera_caption ul.custom{
+	margin-left: 0;
+}
+
+.dark {
+	transition: 0.5s;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+	.dark {
+		opacity: 1;
+	}
+
+}
+
+@media screen and (max-width: 635px) {
+	.camera_caption h2.custom{
+		margin-top: -10%;
+	}
+}
+
+@media screen and (max-width: 593px) {
+	.camera_caption h2.custom{
+		/*margin-top: -20%;*/
+		font-size: 50px;
+	}
+}
+
+
+.before-button{
+    float: left;
+    line-height: 55px;
+    font-size: 14px;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 700;
+}
+
+.divider{
+    background: white;
+    z-index: 10;
+    position: relative;
+    width: 120%;
+    margin-left: -10%;
+    height: 100px;
+    bottom: -40px;
+    transform: rotate(-3deg);
+}
+
+.main-frame {
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+    height: 660px;
+}
+
+.row.Fresh.custom{
+    margin-top: 1%!important;
+    margin-bottom: 100px!important;
+}
+
+
+#home.custom{
+    margin-bottom: -100px;
+}
+
+@media screen and (max-width: 1229px) {
+    .main-frame {
+        height: 500px;
+    }
+
+    .divider{
+        height: 80px;
+        bottom: -50px;
+    }
+
+    #home.custom{
+        margin-bottom: -80px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .row.Fresh.custom{
+        margin-top: 2%!important;
+        /*margin-bottom: 50px!important;*/
+    }
+
+    .main-frame {
+        height: 420px;
+    }
+
+    .divider {
+        height: 50px;
+        bottom: -50px;
+    }
+
+    #home.custom {
+        margin-bottom: -100px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .main-frame {
+        height: 55vw;
+
+    }
+
+    .divider{
+        height: 10vw;
+        display: block;
+        bottom: -30px;
+    }
+
+    #home.custom{
+        margin-bottom: -20vw;
+    }
+}
+
+
+@media screen and (max-width: 530px) {
+
+    .main-frame {
+        height: 55vw;
+    }
+
+    .divider{
+        height: 14vw;
+        display: block;
+        bottom: -50px;
+    }
+
+    #home.custom{
+        margin-bottom: -35vw;
+    }
+}
+
+
+.button{
+    display: inline-block;
+    width: 80%;
+    max-width: 190px;
+
+    border-radius: 4px;
+    padding: 10px;
+    background: #2f2f2f;
+    box-shadow: 0px 2px 0px 0px #000;
+    cursor: pointer;
+}
+
+.button a{
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.button:hover{
+    box-shadow: 0px 2px 0px 0px #179abf;
+    background: #1fcdff;
+}
+
+.button:hover a{
+    color: black;
+}
+
+.cBtn .buy a{
+    color: black;
+}
+
+.cBtn .buy:hover a{
+    color: white;
+}
+
+.cBtn .buy:hover{
+    background: #2f2f2f;
+    box-shadow: 0px 2px 0px 0px #000;
+}
+
+.element.col-sm-3.gall.web{
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 767px) {
+
+  .element.col-sm-3.gall.web{
+      margin-bottom: 10%;
+  }
+}
+
