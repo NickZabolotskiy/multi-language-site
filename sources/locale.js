@@ -19,35 +19,31 @@ function loadLocale(defLang) {
 
 function changeLocale(lang) {
     if (!locale[lang]) return console.log("no found language");
-    else {
-        changeText('locale', locale[lang]);
-        changeInputs('locale-contacts-form',locale[lang]["contacts"]["form"]);
-    }
+    else changeText('locale', locale[lang]);
 
-
-    function changeText(name, object) {
+    function changeText(name, object, startIndex) {
         for (key in object)
             if (Array.isArray(object[key]) && typeof object[key] != 'string' && typeof object[key][0] == 'string') getArrayText(key, object, name);
             else if (typeof object[key] == "object" ){
                 if(isNaN(key)) changeText(name + "-" + key, object[key]);
-                else changeText(name, object[key]);
+                else changeText(name, object[key],key);
             }
-            else getText(key, object, name);
+            else getText(key, object, name, startIndex);
     }
-    function getText(key, object, name) {
-        for (elementKey in document.getElementsByClassName(name + "-" + key))
+    function getText(key, object, name, startIndex) {
+        var elementKey=0;
+        if(startIndex) elementKey = startIndex;
+
+        for ( ; elementKey < document.getElementsByClassName(name + "-" + key).length; elementKey++)
             if (!isNaN(elementKey)) document.getElementsByClassName(name + "-" + key)[elementKey].textContent = object[key];
 
     }
-    function getArrayText(key, object, name) {
-        for (elementKey in document.getElementsByClassName(name + "-" + key))
-            if (!isNaN(elementKey)) document.getElementsByClassName(name + "-" + key)[elementKey].textContent = object[key][elementKey % object[key].length];
-    }
-    function changeInputs(name, object) {
-        for (key in object)
-        for (elementKey in document.getElementsByClassName(name + "-" + key))
-            if (!isNaN(elementKey)) document.getElementsByClassName(name + "-" + key)[elementKey].placeholder = object[key];
+    function getArrayText(key, object, name, startIndex) {
+        var elementKey=0;
+        if(startIndex) elementKey = startIndex;
 
+        for ( ; elementKey < document.getElementsByClassName(name + "-" + key).length; elementKey++)
+            if (!isNaN(elementKey)) document.getElementsByClassName(name + "-" + key)[elementKey].textContent = object[key][elementKey % object[key].length];
     }
 
 }
